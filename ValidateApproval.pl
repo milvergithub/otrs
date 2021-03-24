@@ -86,9 +86,10 @@ sub Validate {
         return;
     }
 
-    if ( $Param{Data}->{DynamicField_Status} && $Param{Data}->{DynamicField_Status} eq 'Approval' ) {
-        return 1;
-    }
+    #if ( $Param{Data}->{Queue} && $Param{Data}->{Queue} eq 'Raw' ) {
+    #    return 1;
+    #}
+    return 1;
 
     return;
 }
