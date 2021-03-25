@@ -88,9 +88,18 @@ sub Validate {
 
     $Kernel::OM->Get('Kernel::System::Log')->Log(
             Priority => 'error',
-            Message  => "-------------------->  $Param{Data}",
+            Message  => "-------------------->  $Param{Data}->{DynamicField_Status",
     );
 
+    $Kernel::OM->Get('Kernel::System::Log')->Log(
+            Priority => 'error',
+            Message  => "-------------------->  $Param{Data}->{Queue}",
+    );
+
+    $Kernel::OM->Get('Kernel::System::Log')->Log(
+            Priority => 'error',
+            Message  => "-------------------->  $Param{Data}->{Responsible}",
+    );
     #if ( $Param{Data}->{DynamicField_Status} && $Param{Data}->{DynamicField_Status} eq 'Approval' ) {
     #    return 1;
     #}
