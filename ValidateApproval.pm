@@ -86,7 +86,12 @@ sub Validate {
         return;
     }
 
-    #if ( $Param{Data}->{Queue} && $Param{Data}->{Queue} eq 'Raw' ) {
+    $Kernel::OM->Get('Kernel::System::Log')->Log(
+            Priority => 'error',
+            Message  => "-------------------->  $Param{Data}",
+    );
+
+    #if ( $Param{Data}->{DynamicField_Status} && $Param{Data}->{DynamicField_Status} eq 'Approval' ) {
     #    return 1;
     #}
     return 1;
